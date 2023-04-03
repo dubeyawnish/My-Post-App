@@ -3,15 +3,24 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import About from './Components/Screen/About';
 import Contact from './Components/Screen/Contact';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Components/Screen/Home';
 
 function App() {
   return (
-    <div className="">
-     <Navbar />
-    <About />
-    <Contact />
-      
-    </div>
+    <Router>
+      <div >
+
+        <Navbar />
+        <Routes>
+        <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contact" element={<Contact />} />
+
+        </Routes>
+
+      </div>
+    </Router>
   );
 }
 
