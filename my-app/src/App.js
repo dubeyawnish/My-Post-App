@@ -8,6 +8,7 @@ import Home from './Components/Screen/Home';
 import Footer from './Components/Footer';
 import Allpost from './Components/Screen/Allpost';
 import PostDetail from './Components/Screen/PostDetail';
+import CreatePost from './Components/Screen/CreatePost';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/posts" element={<Allpost />} />
+          <Route exact path="/create" element={<CreatePost />}/>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/posts/details/:postId/:userId" element={<PostDetail/>} />    {/*dynamic routing*/}
           <Route exact path="/contact" element={<Contact />} />

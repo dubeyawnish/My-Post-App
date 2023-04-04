@@ -19,6 +19,9 @@ const Navbar = () => {
                                 <NavLink className="nav-link text-uppercase" to="/posts">Post</NavLink>
                             </li>
                             <li className="nav-item">
+                                <NavLink className="nav-link text-uppercase" to="/create">Create Post</NavLink>
+                            </li>
+                            <li className="nav-item">
                                 <NavLink className="nav-link text-uppercase" aria-current="page" to="/about">AboutUs</NavLink>
                             </li>
                             

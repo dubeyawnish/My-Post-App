@@ -6,7 +6,7 @@ import './PostDetail.css';
 
 
 const PostDetail = () => {
-    const initialstate={body:"",title:"",userId:"" ,id:""}
+   
     const { userId, postId } = useParams();
     //const [post, setPost] = useState(initialstate);
     //const [user, setUser] = useState({});
@@ -100,14 +100,17 @@ const PostDetail = () => {
                                 <p className="card-text">{name}</p>
                             </div>
                             <ul className="list-group list-group-flush">
-                                <li className="list-group-item">{email}</li>
-                                <li className="list-group-item">{phone}</li>
-                                <li className="list-group-item">{website}</li>
+                                <li className="list-group-item">
+                                    <a href={`mailto:${email}`}>{email}</a>
+                                </li>
+                                <li className="list-group-item">
+                                    <a href={`tel:${phone}`}>{phone}</a>
+                                </li>
+                                <li className="list-group-item">
+                                    <a href={`www.${website}`}>Visit Our Website</a>
+                                </li>
                             </ul>
-                            <div className="card-body">
-                                <a href="#" className="card-link">Card link</a>
-                                <a href="#" className="card-link">Another link</a>
-                            </div>
+                            
                     </div>
 
 
