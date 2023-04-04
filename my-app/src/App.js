@@ -6,6 +6,7 @@ import Contact from './Components/Screen/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Screen/Home';
 import Footer from './Components/Footer';
+import Allpost from './Components/Screen/Allpost';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
 
         <Navbar />
         <Routes>
-        <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/posts" element={<Allpost />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
 
