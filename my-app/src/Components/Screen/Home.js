@@ -146,6 +146,20 @@ const Home = () => {
         </div>
 
       </section>
+
+      <section className=' bg-primary bg-gradient' style={{minHeight:'180px'}}>
+        <div className='d-flex flex-column  align-items-center'>
+        <i className=" my-3 fs-1 fa-solid fa-location-dot"></i>
+           <h3 className='text-white text-uppercase'>We have wide variety of posts</h3>
+           <button className=' fw-bold btn btn-warning text-uppercase my-2'>View All post</button>
+        </div>
+
+
+      </section>
+
+
+
+
       <section className="out-portfolio container">
         <h3 className="text-center text-uppercase py-4"> Our portfolio</h3>
 
