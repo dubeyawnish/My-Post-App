@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
+import { API_BASE_URL } from '../Constants/Config';
 
 const Allpost = () => {
 
     const [posts, setPosts] = useState([]);
+    const [loader ,setloader]=useState(true);
 
     useEffect(() => {
         getAllPosts();
@@ -10,12 +12,14 @@ const Allpost = () => {
 
 
     const getAllPosts = () => {
+       
 
-        fetch('https://jsonplaceholder.typicode.com/posts')
+        fetch(`${API_BASE_URL}/posts`)
             .then((response) => response.json())
             .then((json) => {
-                console.log(json)
+                //console.log(json)
                 setPosts(json);
+                setloader(false);
             });
 
 
@@ -27,9 +31,12 @@ const Allpost = () => {
             <h3 className="text-center text-uppercase py-4"> All Post</h3>
             
             <div className='row '>
-                {
+                { 
+                   loader ?<div className=" container spinner-border text-primary" role="status">
+                   <span className="visually-hidden">.</span>
+                 </div>:
                     posts.map((post, index) => {
-                        return <div className="col-lg-4 col-md-4 col-sm-12 py-2">
+                        return <div key={index} className="col-lg-4 col-md-4 col-sm-12 py-2">
                             <div className="card" >
                                 <img src="https://source.unsplash.com/random/400*400?city,night" className="card-img-top" alt="..." />
                                 <div className="card-body">

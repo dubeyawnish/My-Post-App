@@ -163,26 +163,26 @@ const Home = () => {
       <section className="out-portfolio container">
         <h3 className="text-center text-uppercase py-4"> Our portfolio</h3>
 
-        <div class=" text-center">
-          <div class="row g-2">
-            <div class="col-6">
-              <div class="p-1 border bg-light">
+        <div className=" text-center">
+          <div className="row g-2">
+            <div className="col-6">
+              <div className="p-1 border bg-light">
               <img src="https://images.unsplash.com/photo-1573167278390-0699fb12be46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fGhvdXNlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="..." />
                 
               </div>
             </div>
-            <div class="col-6">
-              <div class="p-1 border bg-light">
+            <div className="col-6">
+              <div className="p-1 border bg-light">
               <img src="https://images.unsplash.com/photo-1600607688960-e095ff83135c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzR8fGhvdXNlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="..." />
               </div>
             </div>
-            <div class="col-6">
-              <div class="p-1 border bg-light">
+            <div className="col-6">
+              <div className="p-1 border bg-light">
               <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjB8fGhvdXNlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="..." />
               </div>
             </div>
-            <div class="col-6">
-              <div class="p-1 border bg-light">
+            <div className="col-6">
+              <div className="p-1 border bg-light">
               <img src="https://images.unsplash.com/photo-1565953554309-d181306db7d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjN8fGhvdXNlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="..." />
               </div>
             </div>
