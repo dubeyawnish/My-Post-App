@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { API_BASE_URL } from '../Constants/Config';
+import { Link } from 'react-router-dom';
 
 const Allpost = () => {
 
@@ -43,7 +44,7 @@ const Allpost = () => {
                                     <h5 className="card-title">{post.title}</h5>
                                     <p className="card-text">{post.body}</p>
                                     <div className="d-grid">
-                                        <a href="#" className="btn btn-warning">Go somewhere</a>
+                                        <Link to={`/posts/details/${post.id}/${post.userId}`} className="btn btn-warning">Go somewhere</Link>
                                     </div>
 
                                 </div>
