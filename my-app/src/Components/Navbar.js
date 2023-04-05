@@ -42,7 +42,7 @@ const Navbar = () => {
                                 <NavLink className=" btn btn-primary  " to="/signup"><i className="fa-solid fa-user-plus"></i></NavLink>
                         </li>
                         <li className="nav-item">
-                                <NavLink className=" btn btn-primary " to="/login"><i class="fa-solid fa-right-to-bracket"></i></NavLink>
+                                <NavLink className=" btn btn-primary " to="/login"><i className="fa-solid fa-right-to-bracket"></i></NavLink>
                         </li>
                     </div>
                 </div>
