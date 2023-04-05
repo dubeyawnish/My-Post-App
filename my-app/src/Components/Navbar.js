@@ -36,7 +36,14 @@ const Navbar = () => {
                             <button className="btn btn-primary" type="submit">
                             <i className="fa-solid fa-magnifying-glass"></i>
                             </button>
+
                         </form>
+                        <li className="nav-item">
+                                <NavLink className=" btn btn-primary  " to="/signup"><i className="fa-solid fa-user-plus"></i></NavLink>
+                        </li>
+                        <li className="nav-item">
+                                <NavLink className=" btn btn-primary " to="/login"><i class="fa-solid fa-right-to-bracket"></i></NavLink>
+                        </li>
                     </div>
                 </div>
             </nav>

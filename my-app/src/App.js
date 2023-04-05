@@ -9,6 +9,8 @@ import Footer from './Components/Footer';
 import Allpost from './Components/Screen/Allpost';
 import PostDetail from './Components/Screen/PostDetail';
 import CreatePost from './Components/Screen/CreatePost';
+import Signup from './Components/Screen/Signup';
+import Login from './Components/Screen/Login';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/posts" element={<Allpost />} />
           <Route exact path="/create" element={<CreatePost />}/>
+          <Route exact path="/signup" element={<Signup />}/>
+          <Route exact path="/login" element={<Login />}/>
           <Route exact path="/create/:postId/:userId" element={<CreatePost />}/>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/posts/details/:postId/:userId" element={<PostDetail/>} />    {/*dynamic routing*/}
