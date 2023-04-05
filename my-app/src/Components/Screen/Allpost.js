@@ -28,7 +28,7 @@ const Allpost = () => {
 
 
     return (
-        <section className="featured-posts ">
+        <section className="featured-posts container">
             <h3 className="text-center text-uppercase py-4"> All Post</h3>
             
             <div className='row '>
@@ -43,8 +43,10 @@ const Allpost = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{post.title}</h5>
                                     <p className="card-text">{post.body}</p>
-                                    <div className="d-grid">
-                                        <Link to={`/posts/details/${post.id}/${post.userId}`} className="btn btn-warning">Go somewhere</Link>
+                                    <div className="d-flex justify-content-around">
+                                        <Link to={`/posts/details/${post.id}/${post.userId}`} className="btn btn-primary"><i className="fa-solid fa-location-arrow me-1"></i>Details</Link>
+                                        <Link to={`/create/${post.id}/${post.userId}`} className="btn btn-warning"><i className="fa-regular fa-pen-to-square me-1"></i>Edit</Link>
+                                        <Link to={`/posts/details/${post.id}/${post.userId}`} className="btn btn-danger"><i className="fa-solid fa-trash me-1"></i>Delete</Link>
                                     </div>
 
                                 </div>

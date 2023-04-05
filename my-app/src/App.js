@@ -20,6 +20,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/posts" element={<Allpost />} />
           <Route exact path="/create" element={<CreatePost />}/>
+          <Route exact path="/create/:postId/:userId" element={<CreatePost />}/>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/posts/details/:postId/:userId" element={<PostDetail/>} />    {/*dynamic routing*/}
           <Route exact path="/contact" element={<Contact />} />
