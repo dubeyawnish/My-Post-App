@@ -45,7 +45,7 @@ const Signup = () => {
             }
         }
 
-        axios.post(`${API_BASE_URL}/users`,reqBody,config)
+        axios.post(`${API_BASE_URL}/users`, reqBody, config)
             .then((response) => {
                 // debugger;
                 //console.log(response);
@@ -54,21 +54,19 @@ const Signup = () => {
                 setlname("");
                 setPhone("");
                 setPswd("");
-                alertFuction("Registartion successful, Please go to login",'success');
+                alertFuction("Registartion successful, Please go to login", 'success');
             })
             .catch((err) => {
                 //debugger;
                 //console.log(err);
-                alertFuction('Some error occured while signup','danger');
+                alertFuction('Some error occured while signup', 'danger');
             })
-
-
 
     }
 
 
-   
-     
+
+
 
     return (
         <div className="container">
@@ -79,26 +77,26 @@ const Signup = () => {
                 <form onSubmit={(eve) => { signup(eve) }}>
                     <div className="mb-3">
                         <label htmlFor="fname" className="form-label">Firstname</label>
-                        <input onChange={(e) => { setFname(e.target.value) }} type="text" className="form-control" id="fname" required />
+                        <input value={fname} onChange={(e) => { setFname(e.target.value) }} type="text" className="form-control" id="fname" required />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="lname" className="form-label">Lastname</label>
-                        <input onChange={(e) => { setlname(e.target.value) }} type="text" className="form-control" id="lname" required />
+                        <input value={lname} onChange={(e) => { setlname(e.target.value) }} type="text" className="form-control" id="lname" required />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="phone" className="form-label">Contact no.</label>
-                        <input onChange={(e) => { setPhone(e.target.value) }} type="text" className="form-control" id="phone" required />
+                        <input value={phone} onChange={(e) => { setPhone(e.target.value) }} type="text" className="form-control" id="phone" required />
                     </div>
 
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">Email address</label>
-                        <input onChange={(e) => { setEmail(e.target.value) }} type="email" className="form-control" id="email" aria-describedby="emailHelp" required />
+                        <input value={email} onChange={(e) => { setEmail(e.target.value) }} type="email" className="form-control" id="email" aria-describedby="emailHelp" required />
                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
 
                     <div className="mb-3">
                         <label htmlFor="paswd" className="form-label">Password</label>
-                        <input onChange={(e) => { setPswd(e.target.value) }} type="password" className="form-control" id="paswd" required />
+                        <input value={pswd} onChange={(e) => { setPswd(e.target.value) }} type="password" className="form-control" id="paswd" required />
                     </div>
 
 
