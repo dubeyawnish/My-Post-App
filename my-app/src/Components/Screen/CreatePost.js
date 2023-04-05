@@ -61,7 +61,7 @@ const CreatePost = () => {
         methodType='PUT';
        }
 
-
+        //axios.post(url,data,config ).then((res)={console.log(res)}).catch((er)=>{console.log(e)});
         fetch(`${API_BASE_URL}/${url}`, {
             method: `${methodType}`,
             body: reqbody,
