@@ -1,8 +1,23 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../App';
+import { useContext } from 'react';
 
 const Navbar = () => {
+    const {state,dispatch}=useContext(UserContext);
+    const navigate= useNavigate();
+
+    const logout =(eve)=>{
+        eve.preventDefault();
+        localStorage.clear();
+        dispatch({type:'LOGOUT'});
+        navigate('/login')
+
+    }
+
     return (
+
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary bg-gradient">
                 <div className="container-fluid">
@@ -43,6 +58,9 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                                 <NavLink className=" btn btn-primary " to="/login"><i className="fa-solid fa-right-to-bracket"></i></NavLink>
+                        </li>
+                        <li className="nav-item">
+                                <button onClick={(eve)=>{logout(eve)}} className=" btn btn-danger " ><i className="fa-solid fa-right-to-bracket"></i></button>
                         </li>
                     </div>
                 </div>

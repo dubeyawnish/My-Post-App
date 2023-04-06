@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import axios from  'axios';
 import { API_BASE_URL } from '../Constants/Config';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../../App';
 
 
 const Login = () => {
   const [email,setEmail]=useState("");
   const [pswd,setPswd]=useState("");
   const navigate=useNavigate();
+  const {dispatch}=useContext(UserContext);
 
   const login = (eve) => {
     //console.log("hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii")
@@ -28,7 +31,24 @@ const Login = () => {
         .then((response) => {
             // debugger;
             //console.log(response);
-            navigate('/posts');
+            const userId=1;
+            fetch(`${API_BASE_URL}/users/${userId}`)
+            .then((response)=> response.json())
+            .then((json)=>{
+                localStorage.clear();
+                localStorage.setItem('user',JSON.stringify(json));
+                localStorage.setItem('token','ierurdihfdfrpieuifhf');
+
+                const token=localStorage.getItem('token');
+                const user =localStorage.getItem('user');
+                const userState={'token':token,'user':user};
+
+                const action={type:'LOGIN',payload:userState};
+                dispatch(action);
+                navigate('/posts');
+            })
+
+           
             
         })
         .catch((err) => {
